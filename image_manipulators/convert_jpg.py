@@ -1,8 +1,8 @@
 import os
 from PIL import Image
 # Define the directory containing the .tiff images
-input_directory = "/root/home/data_jpg/"
-output_directory = input_directory
+input_directory = "/root/home/data/"
+output_directory = "/root/home/data_jpg/"
 
 # Create the output directory if it doesn't exist
 os.makedirs(output_directory, exist_ok=True)
@@ -16,7 +16,7 @@ for filename in os.listdir(input_directory):
             # Convert the image to RGB (if it's not already)
             rgb_img = img.convert("RGB")
             # Define the output path with .jpeg extension
-            jpeg_path = os.path.join(output_directory, f"{os.path.splitext(filename)[0]}.jpeg")
+            jpeg_path = os.path.join(output_directory, f"{os.path.splitext(filename)[0]}.jpg")
             # Save the image as a .jpeg file
             rgb_img.save(jpeg_path, "JPEG")
 
