@@ -1,0 +1,26 @@
+/mnt/Gbenga_Enemy/ramy/results/Best_Q_Best_Dict.json
+Based on the following questions and their answers, determine if there is evidence of an ephemeral gully in the observed area. Carefully analyze all the questions and the responses to assess.
+
+Q: Given these six images of the exact same area and collected over a period of 10 years, do you see a low point in the terrain? Answer with yes or no only!
+A: No.
+Q: Given these six images of the exact same area and collected over a period of 10 years, are there indications of nearby human activity, such as tillage or machinery tracks? Answer with yes or no only!
+A: No.
+
+After considering these responses, provide a clear conclusion: Is there evidence of an ephemeral gully? Answer with yes or no only.
+[I 2024-11-15 00:39:01,016] A new study created in memory with name: no-name-76952c56-ac9f-4cb0-b8f0-513a435e948a
+1 0
+Got new best 0.6847049941806209 0.635434712698528
+[W 2024-11-15 01:10:29,835] Trial 0 failed with parameters: {'x0': 0, 'x1': 1, 'x2': 0, 'x3': 1, 'x4': 1, 'x5': 1, 'x6': 1, 'x7': 0, 'x8': 1, 'x9': 1, 'x10': 0, 'x11': 0, 'x12': 0, 'x13': 1, 'x14': 1} because of the following error: ValueError("Path is not a file: 'best_dict.json'").
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.10/site-packages/optuna/study/_optimize.py", line 197, in _run_trial
+    value_or_values = func(trial)
+  File "/tmp/ipykernel_34921/855459522.py", line 51, in objective
+    log_best_dict(best_dict)
+  File "/tmp/ipykernel_34921/3721395326.py", line 9, in log_best_dict
+    artifact.add_file("best_dict.json")
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/artifacts/_validators.py", line 117, in wrapper
+    return method(self, *args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/wandb/sdk/artifacts/artifact.py", line 1197, in add_file
+    raise ValueError(f"Path is not a file: {local_path!r}")
+ValueError: Path is not a file: 'best_dict.json'
+[W 2024-11-15 01:10:29,837] Trial 0 failed with value None.
